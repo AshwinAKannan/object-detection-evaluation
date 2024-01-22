@@ -15,7 +15,7 @@ from tests.unit_tests.test_cases.bboxes import (
 @pytest.mark.parametrize(
     "bboxes, intersection, union",
     zip(OVERLAPPING_BBOXES, OVERLAPPING_BBOXES_INTERSECTION, OVERLAPPING_BBOXES_UNION))
-def test_bbox_intersection_over_union(bboxes, intersection, union, caplog):
+def test_bbox_intersection_over_union(bboxes, intersection, union):
     bbox1, bbox2 = bboxes
     iou: float = intersection_over_union(bbox1, bbox2)
     

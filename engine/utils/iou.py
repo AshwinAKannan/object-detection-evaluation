@@ -1,4 +1,10 @@
+import math
+import shapely
+import numpy as np
+
+
 from engine.objects.bbox import BBox
+from engine.objects.polygon import Polygon
 
 
 def intersection_over_union(bbox1: BBox, bbox2: BBox) -> float:
@@ -14,6 +20,9 @@ def intersection_over_union(bbox1: BBox, bbox2: BBox) -> float:
     Returns:
         float: intersection of union of 2 bounding boxes
     """
+    
+    assert type(bbox1) == BBox and type(bbox2) == BBox
+    
     area_bbox1: float = bbox1.area()
     area_bbox2: float = bbox2.area()
     
@@ -42,4 +51,20 @@ def intersection_over_union(bbox1: BBox, bbox2: BBox) -> float:
     assert iou > 0.0
     
     return iou
+
+
+def intersection_over_union_polygon(polygon1: Polygon, polygon2: Polygon):
     
+    assert type(polygon1) == Polygon and type(polygon2) == Polygon
+    
+    polygon1 = shapely.geometry.Polygon(polygon1.vertices)
+    polygon2 = shapely.geometry.Polygon(polygon2.vertices)
+    
+    # print(polygon2)
+    intersection_area: float = polygon1.intersection(polygon2).area
+    # print(intersection_area)
+    union_area: float = polygon1.union(polygon2).area
+    
+    iou: float = intersection_area / union_area
+    
+    return iou

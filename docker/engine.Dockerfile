@@ -28,6 +28,7 @@ RUN pip3 install --upgrade pip setuptools wheel
 RUN pip3 install fiftyone
 RUN pip3 install dvc
 RUN pip3 install pytest
+RUN pip3 install shapely
 
 COPY entrypoint.sh /entrypoint.sh
 
