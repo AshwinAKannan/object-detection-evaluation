@@ -22,6 +22,7 @@ class BBoxDetections:
 
         assert 0.0 <= self.objectness_score <= 1.0, "objectness_score must be between 0.0 and 1.0"
 
+    @property
     def area(self) -> float:
-        return self.bbox.area()
+        return self.bbox.area
     

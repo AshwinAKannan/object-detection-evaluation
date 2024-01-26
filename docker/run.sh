@@ -20,3 +20,4 @@ cmd="docker run  \
 
 echo "$cmd"
 eval "$cmd"
+

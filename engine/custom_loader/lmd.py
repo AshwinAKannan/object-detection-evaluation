@@ -46,6 +46,7 @@ class LMDImageGTHandler(ImageGTHandler):
             data = json.load(file)
         return data
      
+
 class LMDDetectionLoader(DatasetDetectionLoader):              
     def get_detection_handler_class(self, ):
         return LMDDetectionHandler

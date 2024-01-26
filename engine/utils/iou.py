@@ -23,8 +23,8 @@ def intersection_over_union(bbox1: BBox, bbox2: BBox) -> float:
     
     assert type(bbox1) == BBox and type(bbox2) == BBox
     
-    area_bbox1: float = bbox1.area()
-    area_bbox2: float = bbox2.area()
+    area_bbox1: float = bbox1.area
+    area_bbox2: float = bbox2.area
     
     # find intersection of 2 bbox
     # bottom-left x, y & top-right x, y of intersection box

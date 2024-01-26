@@ -32,14 +32,27 @@ class BBox:
         assert self.x1 >= 0 and \
             self.y1 >= 0 and \
             self.x2 >= 0 and \
-            self.y2 >= 0, f"Bounding Boxes cannot have negative coordinates. Found \
+            self.y2 >= 0, f"negative bounding box coordinates. Found \
                     ({self.x1}, {self.y1}), ({self.x2}, {self.y2})"
         
         # bottom left x should be <= top right x
         # bottom left y should be <= top right y      
         assert self.x1 <= self.x2 and self.y1 <= self.y2
     
+    @property
     def area(self) -> float:
+        """Computes  area of the bounding box."""
         area: float = (self.y2 - self.y1) * (self.x2 - self.x1)
-        assert area >= 0, "Negative bbox area"
+        assert area >= 0, "Negative bounding box area"
         return area
+    
+    @property
+    def height(self) -> float:
+        """Computes height of the bounding box."""
+        return self.y2 - self.y1
+
+    @property
+    def width(self) -> float:
+        """Computes width of the bounding box."""
+        return self.x2 - self.x1
+    

@@ -76,6 +76,8 @@ class NMS(ABC):
                         score_threshold: float,
                         iou_threshold: float) -> List:
         
+        
+        
         if len(detections) == 0:
             return []
         

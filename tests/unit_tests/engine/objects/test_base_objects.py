@@ -27,7 +27,7 @@ def set_logging_level(caplog) -> None:
     zip(BBOXES, BBOX_AREAS))
 def test_bbox_area(bbox: BBox,
                    expected_area: float,) -> None:
-    assert_equal(actual=bbox.area(), desired=expected_area)
+    assert_equal(actual=bbox.area, desired=expected_area)
 
 
 @pytest.mark.parametrize("invalid_bbox", INVALID_BBOXES)
