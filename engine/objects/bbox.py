@@ -1,5 +1,15 @@
 
+from attr import dataclass
+
+
+@dataclass(init=False, frozen=False, order=True)
 class BBox:
+     
+    x1: float
+    y1: float
+    x2: float
+    y2: float
+        
     def __init__(self, x1: float, y1: float, x2: float, y2: float) -> None:
         """
         __init__ _summary_
@@ -12,10 +22,11 @@ class BBox:
             x2 (float): top right x
             y2 (float): top right y
         """
-        self.x1: float = x1
-        self.y1: float = y1
-        self.x2: float = x2
-        self.y2: float = y2
+        
+        object.__setattr__(self, 'x1', x1)
+        object.__setattr__(self, 'y1', y1)
+        object.__setattr__(self, 'x2', x2)
+        object.__setattr__(self, 'y2', y2)
         
         # all coordinates should be +ve
         assert self.x1 >= 0 and \
@@ -32,4 +43,3 @@ class BBox:
         area: float = (self.y2 - self.y1) * (self.x2 - self.x1)
         assert area >= 0, "Negative bbox area"
         return area
-    

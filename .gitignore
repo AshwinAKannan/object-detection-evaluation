@@ -3,6 +3,10 @@ lock/
 __pycache__/
 *.pyc
 .pytest_cache/
+archive/
+assets/
+engine/db/
+scripts/add_detection_to_db.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

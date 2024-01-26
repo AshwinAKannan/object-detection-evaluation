@@ -1,8 +1,16 @@
+from typing import Any
+from attr import dataclass, field
+
+
+@dataclass(init=False, frozen=True, order=False)
 class Polygon:
     # Image Space Polygon
+    vertices: Any = field(init=False)
+    num_vertices: int = field(init=False)
     def __init__(self, points: tuple) -> None:
-        self.vertices: tuple = points
-        self.num_vertices: int = len(self.vertices)
+
+        object.__setattr__(self, 'vertices', points)
+        object.__setattr__(self, 'num_vertices', len(self.vertices)) 
 
         # image space -> ensure (x, y) is always >= 0
         for vertex in self.vertices:
