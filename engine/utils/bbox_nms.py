@@ -1,14 +1,30 @@
-
+from engine.objects.bbox_detection import BBoxDetection
 from engine.utils.nms import NMS
-from engine.objects.bbox_detections import BBoxDetections
-from engine.utils.iou import intersection_over_union
 
 
 class BBoxNMS(NMS):
-
-    def iou_calculator(self, a, b):
-        assert type(a) == BBoxDetections and type(b) == BBoxDetections
+    
+    def adjust_detections(self, detections, shift=True):
         
-        iou: float = intersection_over_union(a.bbox, b.bbox)
+        """Adjust detections by shifting or unshifting based on the 'shift' parameter.
         
-        return iou
+        Args:
+            detections (list): List of detection objects.
+            shift (bool): True to shift bounding boxes, False to unshift them.
+        
+        Returns:
+            list: The adjusted list of detection objects.
+        """
+        if self.class_agnostic is False:
+            for detection in detections:
+                offset = 4096 * detection.class_id if shift else -4096 * detection.class_id
+                detection.bbox.x1 += offset
+                detection.bbox.y1 += offset
+                detection.bbox.x2 += offset
+                detection.bbox.y2 += offset
+                
+        return detections
+    
+    def check_detections_class(self, detections) -> None:
+        for detection in detections:
+            assert isinstance(detection, BBoxDetection)

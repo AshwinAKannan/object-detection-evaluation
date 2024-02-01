@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gets_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000802.jpg</filename>
+	<size>
+		<width>424</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>refrigerator</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>216.05</xmin>
+			<ymin>185.23</ymin>
+			<xmax>381.81</xmax>
+			<ymax>541.26</ymax>
+		</bndbox>
+		<score>0.781</score>
+	</object>
+	<object>
+		<name>oven</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>47.08</xmin>
+			<ymin>289.08</ymin>
+			<xmax>173.64</xmax>
+			<ymax>520.63</ymax>
+		</bndbox>
+		<score>0.598</score>
+	</object>
+</annotation>

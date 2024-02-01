@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gets_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000626.jpg</filename>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>clock</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>314.52</xmin>
+			<ymin>124.36</ymin>
+			<xmax>355.84</xmax>
+			<ymax>166.82999999999998</ymax>
+		</bndbox>
+		<score>0.378</score>
+	</object>
+	<object>
+		<name>laptop</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>398.15</xmin>
+			<ymin>129.71</ymin>
+			<xmax>419.03</xmax>
+			<ymax>176.62</ymax>
+		</bndbox>
+		<score>0.701</score>
+	</object>
+</annotation>

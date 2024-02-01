@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gts_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000502.jpg</filename>
+	<size>
+		<width>640</width>
+		<height>427</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>bear</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>226.96</xmin>
+			<ymin>88.0</ymin>
+			<xmax>500.09000000000003</xmax>
+			<ymax>345.74</ymax>
+		</bndbox>
+	</object>
+</annotation>

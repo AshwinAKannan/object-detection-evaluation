@@ -29,12 +29,14 @@ RUN apt-get install -y graphviz
 
 
 RUN pip3 install --upgrade pip setuptools wheel
-# RUN pip3 install opencv-python --upgrade
 RUN pip3 install SQLAlchemy
 RUN pip3 install pylint
 RUN pip3 install fiftyone
 RUN pip3 install dvc
 RUN pip3 install pytest
+RUN pip3 install py-spy
+RUN pip3 install memory-profiler
+RUN pip3 install line_profiler
 RUN pip3 install shapely
 
 COPY entrypoint.sh /entrypoint.sh

@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gts_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000001083.jpg</filename>
+	<size>
+		<width>640</width>
+		<height>427</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>cow</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>363.3</xmin>
+			<ymin>172.13</ymin>
+			<xmax>411.3</xmax>
+			<ymax>218.19</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cow</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>384.3</xmin>
+			<ymin>190.3</ymin>
+			<xmax>425.71000000000004</xmax>
+			<ymax>237.01000000000002</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cow</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>182.44</xmin>
+			<ymin>206.97</ymin>
+			<xmax>226.87</xmax>
+			<ymax>254.95</ymax>
+		</bndbox>
+	</object>
+</annotation>

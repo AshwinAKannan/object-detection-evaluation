@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gets_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000459.jpg</filename>
+	<size>
+		<width>516</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>tie</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>170.57</xmin>
+			<ymin>278.99</ymin>
+			<xmax>232.2</xmax>
+			<ymax>518.8</ymax>
+		</bndbox>
+		<score>0.97</score>
+	</object>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>0.0</xmin>
+			<ymin>84.85</ymin>
+			<xmax>457.88</xmax>
+			<ymax>632.8100000000001</ymax>
+		</bndbox>
+		<score>0.16</score>
+	</object>
+</annotation>

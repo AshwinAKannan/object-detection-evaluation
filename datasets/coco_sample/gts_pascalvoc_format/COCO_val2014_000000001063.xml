@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gts_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000001063.jpg</filename>
+	<size>
+		<width>480</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>giraffe</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>162.3</xmin>
+			<ymin>162.26</ymin>
+			<xmax>293.0</xmax>
+			<ymax>556.46</ymax>
+		</bndbox>
+	</object>
+</annotation>

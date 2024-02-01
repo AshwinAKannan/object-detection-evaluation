@@ -1,7 +1,7 @@
 import numpy as np
 from engine.objects.polygon import Polygon
-from engine.objects.bbox_detections import BBoxDetections
-from engine.objects.polygon_detections import PolygonDetections
+from engine.objects.bbox_detection import BBoxDetection
+from engine.objects.polygon_detection import PolygonDetection
 
 # regular convex polygons
 # 1. square as a polygon. 8 points.  area = 50
@@ -40,53 +40,53 @@ POLYGON8 = Polygon(points=((2, 1.5), (2, 2.5), (3, 2.5), (4, 2.5),
 
 # 100 % overlap  
 NMS_POLYGON1 = [
-    PolygonDetections(POLYGON1.vertices, 0.1, 0),
-    PolygonDetections(POLYGON1.vertices, 0.2, 1),
-    PolygonDetections(POLYGON1.vertices, 0.3, 10),
-    PolygonDetections(POLYGON1.vertices, 0.4, 3),
-    PolygonDetections(POLYGON1.vertices, 0.5, 2),
+    PolygonDetection(POLYGON1.vertices, 0.1, 0),
+    PolygonDetection(POLYGON1.vertices, 0.2, 1),
+    PolygonDetection(POLYGON1.vertices, 0.3, 10),
+    PolygonDetection(POLYGON1.vertices, 0.4, 3),
+    PolygonDetection(POLYGON1.vertices, 0.5, 2),
 ]
 
 # 100 % overlap
 NMS_POLYGON2 = [
-    PolygonDetections(POLYGON2.vertices, 0.1, 0),
-    PolygonDetections(POLYGON2.vertices, 0.1, 1),
-    PolygonDetections(POLYGON2.vertices, 0.1, 10),
-    PolygonDetections(POLYGON2.vertices, 0.1, 3),
-    PolygonDetections(POLYGON2.vertices, 0.1, 2),
+    PolygonDetection(POLYGON2.vertices, 0.1, 0),
+    PolygonDetection(POLYGON2.vertices, 0.1, 1),
+    PolygonDetection(POLYGON2.vertices, 0.1, 10),
+    PolygonDetection(POLYGON2.vertices, 0.1, 3),
+    PolygonDetection(POLYGON2.vertices, 0.1, 2),
 ]
 
 
 # 100 % overlap
 NMS_POLYGON3 = [
-    PolygonDetections(POLYGON4.vertices, 0.1, 0),
-    PolygonDetections(POLYGON4.vertices, 0.9, 1),
-    PolygonDetections(POLYGON4.vertices, 0.3, 10),
-    PolygonDetections(POLYGON4.vertices, 0.4, 3),
-    PolygonDetections(POLYGON4.vertices, 0.5, 2),
+    PolygonDetection(POLYGON4.vertices, 0.1, 0),
+    PolygonDetection(POLYGON4.vertices, 0.9, 1),
+    PolygonDetection(POLYGON4.vertices, 0.3, 10),
+    PolygonDetection(POLYGON4.vertices, 0.4, 3),
+    PolygonDetection(POLYGON4.vertices, 0.5, 2),
 ]
 
 # 100 % overlap
 NMS_POLYGON4 = [
-    PolygonDetections(POLYGON6.vertices, 0.1, 0),
-    PolygonDetections(POLYGON6.vertices, 0.9, 10),
-    PolygonDetections(POLYGON6.vertices, 0.4, 3),
+    PolygonDetection(POLYGON6.vertices, 0.1, 0),
+    PolygonDetection(POLYGON6.vertices, 0.9, 10),
+    PolygonDetection(POLYGON6.vertices, 0.4, 3),
 ]
 
 
 # overlapping polygon (< 100%)
 # iou: 2/16
 NMS_POLYGON5 = [
-    PolygonDetections(POLYGON6.vertices, 0.1, 0),
-    PolygonDetections(POLYGON7.vertices, 0.9, 10),
+    PolygonDetection(POLYGON6.vertices, 0.1, 0),
+    PolygonDetection(POLYGON7.vertices, 0.9, 10),
 ]
 
 
 # polygon in a polygon
 # iou: 3/14
 NMS_POLYGON6 = [
-    PolygonDetections(POLYGON6.vertices, 0.1, 0),
-    PolygonDetections(POLYGON8.vertices, 0.9, 10),
+    PolygonDetection(POLYGON6.vertices, 0.1, 0),
+    PolygonDetection(POLYGON8.vertices, 0.9, 10),
 
 ]
 
@@ -187,8 +187,8 @@ POLYGON_NMS_SCENARIOS = [
 
 INVALID_POLYGON_NMS1 = [
 
-    BBoxDetections(0, 0, 10, 10, 0.50, 0),
-    BBoxDetections(0, 0, 2, 2, 0.55, 0),
+    BBoxDetection(0, 0, 10, 10, 0.50, 0),
+    BBoxDetection(0, 0, 2, 2, 0.55, 0),
 
 ]
 

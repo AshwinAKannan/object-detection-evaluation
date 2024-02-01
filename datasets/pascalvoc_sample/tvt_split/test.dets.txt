@@ -1,0 +1,10 @@
+datasets/pascalvoc_sample/dets_classid_abs_xyx2y2/2007_000549.txt
+datasets/pascalvoc_sample/dets_classid_abs_xyx2y2/2007_000733.txt
+datasets/pascalvoc_sample/dets_classid_abs_xyx2y2/2007_003525.txt
+datasets/pascalvoc_sample/dets_classid_abs_xyx2y2/2007_004856.txt
+datasets/pascalvoc_sample/dets_classid_abs_xyx2y2/2007_005460.txt
+datasets/pascalvoc_sample/dets_classid_abs_xyx2y2/2007_005688.txt
+datasets/pascalvoc_sample/dets_classid_abs_xyx2y2/2007_009346.txt
+datasets/pascalvoc_sample/dets_classid_abs_xyx2y2/2008_002045.txt
+datasets/pascalvoc_sample/dets_classid_abs_xyx2y2/2008_006599.txt
+datasets/pascalvoc_sample/dets_classid_abs_xyx2y2/2010_004175.txt

@@ -56,3 +56,44 @@ class BBox:
         """Computes width of the bounding box."""
         return self.x2 - self.x1
     
+    def intersection_over_union(self, another_bbox: 'BBox') -> float:
+        """
+        intersection_over_union
+
+        Computes Intersection of Union with given BBox
+
+        Args:
+            another_bbox (BBox): bbox with bottom-left, top-right coordinates
+        Returns:
+            float: intersection of union of 2 bounding boxes
+        """
+        assert type(another_bbox) == BBox
+        
+        area_bbox1: float = self.area
+        area_bbox2: float = another_bbox.area
+        
+        # find intersection of 2 bbox
+        # bottom-left x, y & top-right x, y of intersection box
+        bl_x: float = max(self.x1, another_bbox.x1) 
+        bl_y: float = max(self.y1, another_bbox.y1)
+        tr_x: float = min(self.x2, another_bbox.x2)
+        tr_y: float = min(self.y2, another_bbox.y2)
+        
+        h_intersection: float = (tr_y - bl_y)
+        w_intersection: float = (tr_x - bl_x)
+        
+        if h_intersection > 0 and w_intersection > 0:
+            intersection_area: float = h_intersection * w_intersection
+            union_area: float = area_bbox1 + area_bbox2 - intersection_area
+            
+            iou: float = intersection_area / union_area
+            # print(f"intersection_area: {intersection_area}, union_area: {union_area}, iou: {iou}"
+        else:
+            # if either height or width of intersecting box is 0,
+            # iou will be 0
+            return 0.0
+        
+        # iou cannot be 0 at the point
+        assert iou > 0.0
+        return iou
+    

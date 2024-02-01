@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gets_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000724.jpg</filename>
+	<size>
+		<width>375</width>
+		<height>500</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>stop sign</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>123.07</xmin>
+			<ymin>71.83</ymin>
+			<xmax>257.56</xmax>
+			<ymax>224.91000000000003</ymax>
+		</bndbox>
+		<score>0.132</score>
+	</object>
+	<object>
+		<name>truck</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>121.39</xmin>
+			<ymin>279.44</ymin>
+			<xmax>143.13</xmax>
+			<ymax>309.61</ymax>
+		</bndbox>
+		<score>0.449</score>
+	</object>
+	<object>
+		<name>cup</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>127.26</xmin>
+			<ymin>267.21</ymin>
+			<xmax>140.14000000000001</xmax>
+			<ymax>275.35999999999996</ymax>
+		</bndbox>
+		<score>0.141</score>
+	</object>
+	<object>
+		<name>stop sign</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>202.38</xmin>
+			<ymin>259.9</ymin>
+			<xmax>221.39</xmax>
+			<ymax>285.96</ymax>
+		</bndbox>
+		<score>0.388</score>
+	</object>
+</annotation>

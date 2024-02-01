@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gts_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000699.jpg</filename>
+	<size>
+		<width>400</width>
+		<height>267</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>traffic light</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>29.32</xmin>
+			<ymin>74.58</ymin>
+			<xmax>95.38999999999999</xmax>
+			<ymax>170.16</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>traffic light</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>31.1</xmin>
+			<ymin>171.18</ymin>
+			<xmax>116.64000000000001</xmax>
+			<ymax>242.16000000000003</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>traffic light</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>50.63</xmin>
+			<ymin>0.69</ymin>
+			<xmax>97.09</xmax>
+			<ymax>74.89999999999999</ymax>
+		</bndbox>
+	</object>
+</annotation>

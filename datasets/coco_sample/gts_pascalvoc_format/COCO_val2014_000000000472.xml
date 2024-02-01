@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gts_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000472.jpg</filename>
+	<size>
+		<width>640</width>
+		<height>226</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>airplane</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>394.86</xmin>
+			<ymin>56.68</ymin>
+			<xmax>482.07</xmax>
+			<ymax>88.14</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,32 +1,32 @@
 
-from engine.objects.bbox_detections import BBoxDetections
-from engine.objects.polygon_detections import PolygonDetections
+from engine.objects.bbox_detection import BBoxDetection
+from engine.objects.polygon_detection import PolygonDetection
 
 
 NMS_BBOXES1 = [
     
     # 100 % overlap
-    BBoxDetections(0, 0, 10, 10, 0.9, 0), 
-    BBoxDetections(0, 0, 10, 10, 0.99, 1), 
-    BBoxDetections(0, 0, 10, 10, 0.6, 2), 
-    BBoxDetections(0, 0, 10, 10, 0.2, 3), 
-    BBoxDetections(0, 0, 10, 10, 0.8, 4), 
+    BBoxDetection(0, 0, 10, 10, 0.9, 0), 
+    BBoxDetection(0, 0, 10, 10, 0.99, 1), 
+    BBoxDetection(0, 0, 10, 10, 0.6, 2), 
+    BBoxDetection(0, 0, 10, 10, 0.2, 3), 
+    BBoxDetection(0, 0, 10, 10, 0.8, 4), 
     
 ]
 
 
 NMS_BBOXES2 = [
 
-    BBoxDetections(0, 0, 10, 10, 0.9, 0), 
-    BBoxDetections(5, 0, 15, 10, 0.9, 1), 
+    BBoxDetection(0, 0, 10, 10, 0.9, 0), 
+    BBoxDetection(5, 0, 15, 10, 0.9, 1), 
     
 ]
 
 
 NMS_BBOXES3 = [
 
-    BBoxDetections(0, 0, 10, 10, 0.51, 0), 
-    BBoxDetections(2, 2, 8, 8, 0.9, 1), 
+    BBoxDetection(0, 0, 10, 10, 0.51, 0), 
+    BBoxDetection(2, 2, 8, 8, 0.9, 1), 
     
 ]
 
@@ -107,8 +107,8 @@ BBOX_NMS_SCENARIOS = [
 
 INVALID_BBOXES_NMS1 = [
 
-    PolygonDetections(((0, 0), (10, 10), (10, 5)), 0.50, 0), 
-    PolygonDetections(((0, 0), (2, 2), (10, 8)), 0.55, 0), 
+    PolygonDetection(((0, 0), (10, 10), (10, 5)), 0.50, 0), 
+    PolygonDetection(((0, 0), (2, 2), (10, 8)), 0.55, 0), 
     
 ]
 

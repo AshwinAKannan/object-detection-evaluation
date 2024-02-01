@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gets_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000873.jpg</filename>
+	<size>
+		<width>502</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>clock</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>147.82</xmin>
+			<ymin>277.68</ymin>
+			<xmax>159.68</xmax>
+			<ymax>294.3</ymax>
+		</bndbox>
+		<score>0.978</score>
+	</object>
+</annotation>

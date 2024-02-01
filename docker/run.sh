@@ -16,6 +16,7 @@ cmd="docker run  \
     --name engine_v1 \
     -e HOST_USERNAME=$(whoami) \
     -v $mount_path:/work \
+    --cap-add SYS_PTRACE \
     engine_image /bin/bash"
 
 echo "$cmd"

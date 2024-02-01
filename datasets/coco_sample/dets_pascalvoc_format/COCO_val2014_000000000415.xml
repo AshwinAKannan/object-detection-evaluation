@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gets_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000415.jpg</filename>
+	<size>
+		<width>359</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>traffic light</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>62.13</xmin>
+			<ymin>399.09</ymin>
+			<xmax>104.1</xmax>
+			<ymax>443.5</ymax>
+		</bndbox>
+		<score>0.045</score>
+	</object>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1.0</xmin>
+			<ymin>257.44</ymin>
+			<xmax>123.96</xmax>
+			<ymax>559.06</ymax>
+		</bndbox>
+		<score>0.373</score>
+	</object>
+</annotation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gets_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000133.jpg</filename>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>bed</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>0.0</xmin>
+			<ymin>2.87</ymin>
+			<xmax>601.0</xmax>
+			<ymax>421.52</ymax>
+		</bndbox>
+		<score>0.699</score>
+	</object>
+	<object>
+		<name>teddy bear</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>521.34</xmin>
+			<ymin>20.93</ymin>
+			<xmax>569.2900000000001</xmax>
+			<ymax>49.65</ymax>
+		</bndbox>
+		<score>0.423</score>
+	</object>
+</annotation>

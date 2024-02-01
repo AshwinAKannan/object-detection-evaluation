@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gts_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000387.jpg</filename>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>laptop</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>249.17</xmin>
+			<ymin>50.7</ymin>
+			<xmax>624.54</xmax>
+			<ymax>327.90999999999997</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>laptop</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>152.38</xmin>
+			<ymin>50.29</ymin>
+			<xmax>623.24</xmax>
+			<ymax>362.67</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cell phone</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>332.5</xmin>
+			<ymin>111.88</ymin>
+			<xmax>542.5</xmax>
+			<ymax>205.63</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,3 +1,5 @@
+import shapely
+
 from typing import Any
 from attr import dataclass, field
 
@@ -33,5 +35,18 @@ class Polygon:
             area += (x1 * y2 - x2 * y1)
         
         return abs(area) / 2.0
+    
+    def intersection_over_union(self, another_polygon: 'Polygon') -> float:
+    
+        assert type(another_polygon) == Polygon
         
+        polygon1 = shapely.geometry.Polygon(self.vertices)
+        polygon2 = shapely.geometry.Polygon(another_polygon.vertices)
+
+        intersection_area: float = polygon1.intersection(polygon2).area
+        union_area: float = polygon1.union(polygon2).area
+        assert union_area != 0
+        iou: float = intersection_area / union_area
+        assert iou >= 0
+        return iou
         

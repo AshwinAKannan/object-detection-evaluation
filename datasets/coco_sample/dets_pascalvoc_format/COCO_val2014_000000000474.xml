@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gets_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000474.jpg</filename>
+	<size>
+		<width>333</width>
+		<height>500</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>23.37</xmin>
+			<ymin>42.7</ymin>
+			<xmax>333.0</xmax>
+			<ymax>471.90999999999997</ymax>
+		</bndbox>
+		<score>0.163</score>
+	</object>
+	<object>
+		<name>baseball glove</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>22.86</xmin>
+			<ymin>234.5</ymin>
+			<xmax>111.27</xmax>
+			<ymax>305.81</ymax>
+		</bndbox>
+		<score>0.962</score>
+	</object>
+</annotation>

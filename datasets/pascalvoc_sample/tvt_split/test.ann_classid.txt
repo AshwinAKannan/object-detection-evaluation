@@ -1,0 +1,10 @@
+datasets/pascalvoc_sample/gts_classid/2007_000549.xml;datasets/pascalvoc_sample/images/2007_000549.jpg
+datasets/pascalvoc_sample/gts_classid/2007_000733.xml;datasets/pascalvoc_sample/images/2007_000733.jpg
+datasets/pascalvoc_sample/gts_classid/2007_003525.xml;datasets/pascalvoc_sample/images/2007_003525.jpg
+datasets/pascalvoc_sample/gts_classid/2007_004856.xml;datasets/pascalvoc_sample/images/2007_004856.jpg
+datasets/pascalvoc_sample/gts_classid/2007_005460.xml;datasets/pascalvoc_sample/images/2007_005460.jpg
+datasets/pascalvoc_sample/gts_classid/2007_005688.xml;datasets/pascalvoc_sample/images/2007_005688.jpg
+datasets/pascalvoc_sample/gts_classid/2007_009346.xml;datasets/pascalvoc_sample/images/2007_009346.jpg
+datasets/pascalvoc_sample/gts_classid/2008_002045.xml;datasets/pascalvoc_sample/images/2008_002045.jpg
+datasets/pascalvoc_sample/gts_classid/2008_006599.xml;datasets/pascalvoc_sample/images/2008_006599.jpg
+datasets/pascalvoc_sample/gts_classid/2010_004175.xml;datasets/pascalvoc_sample/images/2010_004175.jpg

@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gets_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000969.jpg</filename>
+	<size>
+		<width>425</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>sports ball</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>252.88</xmin>
+			<ymin>271.62</ymin>
+			<xmax>271.31</xmax>
+			<ymax>290.41</ymax>
+		</bndbox>
+		<score>0.765</score>
+	</object>
+	<object>
+		<name>baseball glove</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>231.46</xmin>
+			<ymin>310.32</ymin>
+			<xmax>261.42</xmax>
+			<ymax>345.38</ymax>
+		</bndbox>
+		<score>0.533</score>
+	</object>
+	<object>
+		<name>baseball glove</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>83.88</xmin>
+			<ymin>550.66</ymin>
+			<xmax>126.94</xmax>
+			<ymax>618.0999999999999</ymax>
+		</bndbox>
+		<score>0.37</score>
+	</object>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>94.77</xmin>
+			<ymin>357.4</ymin>
+			<xmax>261.0</xmax>
+			<ymax>630.03</ymax>
+		</bndbox>
+		<score>0.806</score>
+	</object>
+</annotation>

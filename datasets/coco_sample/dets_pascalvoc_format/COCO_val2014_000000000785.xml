@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gets_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000785.jpg</filename>
+	<size>
+		<width>640</width>
+		<height>425</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>252.79</xmin>
+			<ymin>44.73</ymin>
+			<xmax>471.49</xmax>
+			<ymax>391.41</ymax>
+		</bndbox>
+		<score>0.156</score>
+	</object>
+	<object>
+		<name>skis</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>209.34</xmin>
+			<ymin>362.21</ymin>
+			<xmax>619.0600000000001</xmax>
+			<ymax>400.40999999999997</ymax>
+		</bndbox>
+		<score>0.334</score>
+	</object>
+</annotation>

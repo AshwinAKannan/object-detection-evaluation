@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>gets_pascalvoc_format</folder>
+	<filename>COCO_val2014_000000000400.jpg</filename>
+	<size>
+		<width>638</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>dog</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>430.5</xmin>
+			<ymin>148.97</ymin>
+			<xmax>528.12</xmax>
+			<ymax>227.74</ymax>
+		</bndbox>
+		<score>0.534</score>
+	</object>
+	<object>
+		<name>boat</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>0.0</xmin>
+			<ymin>64.72</ymin>
+			<xmax>616.0</xmax>
+			<ymax>542.2</ymax>
+		</bndbox>
+		<score>0.136</score>
+	</object>
+</annotation>
