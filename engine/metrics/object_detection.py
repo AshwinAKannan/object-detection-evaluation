@@ -2,7 +2,6 @@ import os
 import logging
 from ast import List
 from collections import defaultdict
-from re import match
 
 import numpy as np
 
@@ -52,7 +51,7 @@ class ObjectDetectionEvaluationEngine():
         for file_name, data in paired_data.items():
             image_detections = data["image_detections"].load_detections()
             image_annotations = data["image_annotations"].load_annotations(False)['objects']
-            self.__logger.info(file_name)
+            # self.__logger.info(f"Grouping {file_name}")
             for detection in image_detections:
                 self.__dann_pairs[file_name, detection.class_id]["detections"].append(detection)
             
@@ -76,7 +75,8 @@ class ObjectDetectionEvaluationEngine():
             dann_pair = self.__dann_pairs[(image_id, class_id)]
             eval_result = self.__evaluate_image(dann_pair["detections"],
                                                 dann_pair["annotations"],
-                                                iou_threshold)
+                                                iou_threshold,
+                                                max_dets)
 
             acc = _evals[class_id]
             acc["detection_scores"].append(eval_result["detection_scores"])
@@ -209,8 +209,8 @@ class ObjectDetectionEvaluationEngine():
         scores = [detections[det_idx].objectness_score for det_idx in range(len(detections))]
         # print(f"scores len {len(scores)}")
         matched = [det_idx in detection_hit_tracker for det_idx in range(len(detections))]
-
         num_annotations = len([ann_idx for ann_idx in range(len(annotations))])
+        
         return {"detection_scores": scores, "hit": matched, "ann_count": num_annotations}
         
     def evaluate(self, ):
@@ -224,43 +224,6 @@ class ObjectDetectionEvaluationEngine():
         AP75 = np.mean([v['AP'] for k, v in full[0.75].items() if v['AP'] is not None])
         AP = np.mean([v['AP'] for x in full for k, v in full[x].items() if v['AP'] is not None])
         
-        # max recall for 100 dets can also be calculated here
-        AR100 = np.mean(
-            [v['TP'] / v['total positives'] for x in full for k, v in full[x].items() if v['TP'] is not None])
-        # print(AP50, AP75, AP, AR100)
-        # small = {
-        #     i: _evaluate(iou_threshold=i, max_dets=100, area_range=(0, 32**2))
-        #     for i in iou_thresholds
-        # }
-        # APsmall = [x['AP'] for k in small for x in small[k] if x['AP'] is not None]
-        # APsmall = np.nan if APsmall == [] else np.mean(APsmall)
-        # ARsmall = [
-        #     x['TP'] / x['total positives'] for k in small for x in small[k] if x['TP'] is not None
-        # ]
-        # ARsmall = np.nan if ARsmall == [] else np.mean(ARsmall)
-
-        # medium = {
-        #     i: _evaluate(iou_threshold=i, max_dets=100, area_range=(32**2, 96**2))
-        #     for i in iou_thresholds
-        # }
-        # APmedium = [x['AP'] for k in medium for x in medium[k] if x['AP'] is not None]
-        # APmedium = np.nan if APmedium == [] else np.mean(APmedium)
-        # ARmedium = [
-        #     x['TP'] / x['total positives'] for k in medium for x in medium[k] if x['TP'] is not None
-        # ]
-        # ARmedium = np.nan if ARmedium == [] else np.mean(ARmedium)
-
-        # large = {
-        #     i: _evaluate(iou_threshold=i, max_dets=100, area_range=(96**2, np.inf))
-        #     for i in iou_thresholds
-        # }
-        # APlarge = [x['AP'] for k in large for x in large[k] if x['AP'] is not None]
-        # APlarge = np.nan if APlarge == [] else np.mean(APlarge)
-        # ARlarge = [
-        #     x['TP'] / x['total positives'] for k in large for x in large[k] if x['TP'] is not None
-        # ]
-        # ARlarge = np.nan if ARlarge == [] else np.mean(ARlarge)
-
         max_det1 = {
             i: self.__evaluate_dataset(iou_threshold=i, max_dets=1)  #  , area_range=(0, np.inf)
             for i in self.__iou_thresholds
@@ -274,35 +237,34 @@ class ObjectDetectionEvaluationEngine():
             for i in self.__iou_thresholds
         }
         AR10 = np.mean([
-            v['TP'] / v['total positives'] for x in max_det1 for k, v in max_det1[x].items() if v['TP'] is not None
+            v['TP'] / v['total positives'] for x in max_det10 for k, v in max_det10[x].items() if v['TP'] is not None
         ])
         
+        max_det100 = {
+            i: self.__evaluate_dataset(iou_threshold=i, max_dets=100)  #  , area_range=(0, np.inf)
+            for i in self.__iou_thresholds
+        }
+        AR100 = np.mean([
+            v['TP'] / v['total positives'] for x in max_det100 for k, v in max_det100[x].items() if v['TP'] is not None
+        ])
+        
+        ARALL = np.mean([v['TP'] / v['total positives'] for x in full for k, v in full[x].items() if v['TP'] is not None])
+
         print({
             "AP": AP,
             "AP50": AP50,
             "AP75": AP75,
-            # "APsmall": APsmall,
-            # "APmedium": APmedium,
-            # "APlarge": APlarge,
             "AR1": AR1,
             "AR10": AR10,
             "AR100": AR100,
-            # "ARsmall": ARsmall,
-            # "ARmedium": ARmedium,
-            # "ARlarge": ARlarge
+            "ARALL": ARALL,
         })
 
         return {
             "AP": AP,
             "AP50": AP50,
             "AP75": AP75,
-            # "APsmall": APsmall,
-            # "APmedium": APmedium,
-            # "APlarge": APlarge,
             "AR1": AR1,
             "AR10": AR10,
             "AR100": AR100,
-            # "ARsmall": ARsmall,
-            # "ARmedium": ARmedium,
-            # "ARlarge": ARlarge
         }
